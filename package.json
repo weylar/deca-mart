@@ -1,18 +1,19 @@
 {
-  "name": "huss",
+  "name": "deca-mart",
   "version": "1.0.0",
   "description": "API endpoints for an ads listing platform",
   "main": "index.js",
   "scripts": {
     "test": "set NODE_ENV=test &&  sequelize db:migrate:undo:all  && sequelize db:migrate  && nyc --require @babel/register  mocha ./api/tests/*.js --timeout 20000 --exit",
     "test-watch": "nodemon --exec \"npm test\"",
-    "start": "nodemon --exec babel-node ./api/index.js",
+    "start:dev": "nodemon --exec babel-node ./api/index.js",
     "migrate": "sequelize db:migrate",
+    "start": "babel-node ./api/index.js",
     "drop-db": "sequelize db:migrate:undo:all"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/weylar/huss.git"
+    "url": "git+https://github.com/weylar/deca-mart.git"
   },
   "keywords": [
     "ads",
@@ -22,9 +23,9 @@
   "author": "Usman Adio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/weylar/huss/issues"
+    "url": "https://github.com/weylar/deca-mart/issues"
   },
-  "homepage": "https://github.com/weylar/huss#readme",
+  "homepage": "https://github.com/weylar/deca-mart#readme",
   "dependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -47,7 +48,7 @@
     "path": "^0.12.7",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.16.0"
+    "sequelize": "^5.21.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
