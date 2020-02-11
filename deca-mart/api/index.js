@@ -21,7 +21,7 @@ const port = process.env.PORT || 3000;
 app.get('/', (res) => res.status(200).send({
   status: 'success',
   statusCode: 200,
-  message: 'Welcome to the huss API.'
+  message: 'Welcome to the Deca-Mart API.'
 }));
 
 app.use('/api/v1/auth', userRouter);
@@ -35,7 +35,7 @@ app.use('/api/v1/notification', notificationRouter);
 app.use('/api/v1/adReport', adReportRouter);
 
 app.use((req, res, next) => {
-  const error = new Error('Route Does not Exist');
+  const error = new Error('Route does not exist');
   error.status = 404;
   next(error);
 });

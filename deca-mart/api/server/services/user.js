@@ -33,7 +33,7 @@ class UserService {
         profileImageUrl: profileImgUrl,
         token,
       },
-      message: 'You have successfully signed up on Huss.ng',
+      message: 'You have successfully signed up on deca-mart',
     };
   }
 
@@ -48,7 +48,7 @@ class UserService {
       return {
         status: 'error',
         statusCode: 401,
-        message: 'This email is not registered here'
+        message: 'This email is not registered on deca-mart'
       };
     }
 
@@ -79,7 +79,7 @@ class UserService {
           profileImgUrl,
           token
         },
-        message: `Welecome, ${firstName} ${lastName}`
+        message: `Welcome, ${firstName} ${lastName}`
       };
     }
     return {
